@@ -1,0 +1,43 @@
+:root {
+
+    /** LIGHT THEME */
+  
+    /* Base Colors */
+    $c-white: hsl(330, 23%, 95%);
+    $c-brown: #6C6045;
+    $c-light: #BDA5AC;
+    $c-darker: #4B2934;
+    $c-dark: #887177;
+    /* Other Colors */
+    $c-teal: #006180;
+  
+  
+  
+    /* Other Colors */
+    --c-background: #{$c-white};
+    
+    --c-accent: #{$c-brown};
+    --c-text: #{$c-darker};
+  }
+  /** DARK THEME */
+
+@media (prefers-color-scheme: dark){
+    :root {
+ 
+       /* Base Colors*/
+       $c-white: hsl(330, 23%, 95%);
+       ;
+       /*Dust Palette*/
+       $c-brown: #6C6045;
+       $c-light: #BDA5AC;
+       $c-darker: #4B2934;
+       $c-dark: #887177;
+       /* Other Colors */
+       --c-teal: #006180;
+       --c-background: #{$c-darker};
+      
+      --c-text: #{$c-white};
+      --c-accent: #{$c-brown};
+   }
+ }
+ 

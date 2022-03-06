@@ -1,0 +1,23 @@
+@use '../util' as *;
+
+
+.post {
+    background-color: var(--c-accent);
+    width: rem(230);
+    margin: 0 auto;
+    text-align: center;
+    padding: rem(10);
+
+    &__title {
+        color: var(--c-teal);
+        font-size: rem(28);
+        font-weight: bolder;
+    }
+    &__location {
+        font-size: rem(15);
+    }
+    &__image {
+        margin: 0 auto;
+        
+    }
+}
