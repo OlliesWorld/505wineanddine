@@ -17,7 +17,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     url
                   }
                 }
-                location
+                 
                 id
                 publishedAt
                 _rawBody
