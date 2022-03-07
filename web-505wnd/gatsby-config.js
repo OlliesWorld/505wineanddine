@@ -1,22 +1,19 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
+if (process.env.STAGING) {
+  require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}.staging`,
+  })
+} else {
+  require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+  })
+}
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "505 Wine and Dine",
   },
   plugins: [
-    {
-      resolve: 'gatsby-source-sanity',
-      options: {
-        projectId: process.env.SANITY_PROJECT_ID,
-        dataset: process.env.SANITY_DATASET,
-        token: process.env.SANITY_TOKEN,
-        graphqlTag: 'default',
-      },
-    },
+    
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -40,6 +37,15 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: "dde0bwlg",
+        dataset: "production",
+        token: process.env.SANITY_TOKEN,
+        graphqlTag: 'default',
+      },
     },
   ],
 };

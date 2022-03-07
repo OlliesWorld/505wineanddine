@@ -6,7 +6,7 @@ export const query = graphql`
 query PostTemplateQuery {
     post: sanityPost {
       id
-      publishedAt
+      publishedAt(fromNow: true)
       categories {
         _id
         title
@@ -21,7 +21,11 @@ query PostTemplateQuery {
       slug {
         current
       }
-     
+     body {
+        children {
+        text
+      }
+     } 
       _rawBody(resolveReferences: { maxDepth: 5 })
       
     }

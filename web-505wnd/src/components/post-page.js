@@ -1,22 +1,24 @@
- 
-// import { differenceInDays, formatDistance, format } from "date-fns";
 
 import React from "react";
+import PortableText from "./portableText";
+
+// import { buildImageObj } from "../lib/helpers";
+// import { imageUrlFor } from "../lib/image-url";
 
 
 function PostPage(props) {
   const {
-    _rawBody,
+   _rawBody,
     authors,
-    
+   
     title,
     mainImage,
     publishedAt,
   } = props;
-  console.log(props)
+  console.log(props.mainImage)
   return (
-    <article >
-       {mainImage && mainImage.asset && (
+    <article className="container" >
+        {mainImage && mainImage.asset && (
         <div >
           <img
             src={mainImage}
@@ -27,11 +29,14 @@ function PostPage(props) {
       <section>
         <div >
           <div >
-            <h1 >{title}</h1>
-            {/* {_rawBody} */}
+            <div className="title" >{title}</div>
+            <span>
+
+            {_rawBody && <PortableText blocks={_rawBody} />}
+            </span>
           </div>
           <aside >
-            {publishedAt }
+            published: {publishedAt}
             {authors }
             {/* {categories && (
               <div >
