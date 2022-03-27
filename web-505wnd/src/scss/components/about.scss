@@ -1,0 +1,19 @@
+@use '../util' as *;
+
+.about {
+    width: 80%;
+    margin:rem(20) auto;
+    padding: rem(10);
+
+    &__title {
+        font-size: rem(45);
+        font-weight: 600;
+        line-height: rem(50);
+        padding-bottom: rem(20) ;
+    }
+
+    &__content {
+        text-transform: capitalize;
+        line-height: rem(20);
+    }
+}

@@ -1,16 +1,18 @@
 // First, we must import the schema creator
-import createSchema from "part:@sanity/base/schema-creator";
+import createSchema from "part:@sanity/base/schema-creator"
 
 // Then import schema types from any plugins that might expose them
-import schemaTypes from "all:part:@sanity/base/schema-type";
+import schemaTypes from "all:part:@sanity/base/schema-type"
 
 // document schemas
 import event from './documents/event'
 import post from './documents/post'
-import category from "./documents/category";
+import category from "./documents/category"
+import hero from './documents/hero'
 // Object types
+import siteSettings from './siteSettings'
 
-import mainImage from "./objects/mainImage";
+import mainImage from "./objects/mainImage"
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -22,11 +24,12 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
-    
+   siteSettings,
+    hero,
     event,
     post,
     category,
-    
+   
     mainImage,
     
 

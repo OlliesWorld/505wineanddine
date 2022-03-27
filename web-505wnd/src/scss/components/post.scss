@@ -2,8 +2,9 @@
 
 
 .post {
-    background-color: var(--c-accent);
-    width: rem(230);
+    // background-color: var(--c-accent);
+    width: rem(300);
+    height: rem(500);
     margin: 0 auto;
     text-align: center;
     padding: rem(10);
@@ -17,7 +18,7 @@
         font-size: rem(15);
     }
     &__image {
-        margin: 0 auto;
+     
         
     }
 }

@@ -1,0 +1,17 @@
+@use '../util' as *;
+
+.header {
+    background-color: var(--c-accent);
+    width: 100%;
+    height: rem(45);
+    
+    &__title {
+        color: var(--c-dark);
+        text-align: center;
+        font-size: rem(45);
+    }
+}
+
+.HamburgerDrawer, .HamburgerDrawer .HamburgerDrawer-panel{
+    background-color: var(--c-accent);
+}

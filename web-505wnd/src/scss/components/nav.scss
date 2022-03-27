@@ -1,0 +1,16 @@
+@use '../util' as *;
+
+.nav {
+    display: flex;
+    justify-content: end;
+    margin: 0;
+    
+    
+    &__item {
+    margin-right: rem(15);
+    list-style-type: none;
+    font-size: rem(40);
+    color: var(--c-teal);
+}
+
+}
